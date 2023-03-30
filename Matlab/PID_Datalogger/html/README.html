@@ -1,0 +1,146 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>README.m for Plot_Serial</title><meta name="generator" content="MATLAB 9.3"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2018-01-30"><meta name="DC.source" content="README.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>README.m for Plot_Serial</h1><!--introduction--><p>Plot_Serial.m and Plot_Serial.fig are used to define the Graphical User Interface (GUI, or UI) for the incubator.</p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Plot_Serial.m Functions</a></li><li><a href="#2">Callbacks for UI objects</a></li></ul></div><h2 id="1">Plot_Serial.m Functions</h2><div><ul><li><b>varargout = Plot_Serial(varargin)</b> - Creates the UI object, not much to edit here</li></ul></div><div><ul><li><b>Plot_Serial_OpeningFcn(hObject, eventdata, handles, varargin)</b> - Executes just before the UI is made visible. Setup information goes here. Global buffers are created here to pass data between the other methods of the UI. Globals are used in this context because UI operations are conducted through callbacks (functions that are passed as a parameter to other functions) and variables cannot be passed directly with callbacks in Matlab. See: <a href="https://www.mathworks.com/help/matlab/creating_guis/share-data-among-callbacks.html#bt9p4xi">help document</a> for details. <b>This will be fixed to not use globals but to use guidata structure to pass data between callbacks in the UI</b></li></ul></div><div><ul><li><b>varargout = Plot_Serial_OutputFcn(hObject, eventdata, handles)</b> - Outputs from this function are returned to the command line. Currently Unused.</li></ul></div><div><ul><li><b>pushbuttonStop_Callback(hObject, eventdata, handles)</b> - Callback action that occurs when the pushbuttonStop is pressed, which is the Stop button.</li></ul></div><div><ul><li><b>axesTemp_CreateFcn(hObject, eventdata, handles)</b> - Creates the axes used to plot the Temperature data.</li></ul></div><div><ul><li><b>usbChoice = choose_usb_dialog()</b> - Creates Popup to select serial port from drop-down list. Returns the usb selection as a string, usbChoice.</li></ul></div><div><ul><li><b>[obj,flag] = setup_serial(comPort, hObject, handles)</b> - accepts the string of the serial port Arduino is connected to (comPort), and as output values it returns the serial element obj and a flag value used to check if when the script is compiled the serial element exists yet.</li></ul></div><div><ul><li><b>instrcallback(serialObj, event, hObject, handles)</b> - callback for serial.BytesAvailableFunction. This gets called whenever new data is available on the serial port. This is a callback function, so the state of the handles is the same state as when this function was first called. Handles is passed as copy. This also means that handles cannot be updated from this method so guidata(hObject, handles) will not work here.</li></ul></div><div><ul><li><b>updateArduinoVals(handles)</b> - Update the PID and temperature setpoint values in the arduino.</li></ul></div><div><ul><li><b>save_data(tIn,tOut,tSP,pid,time,volts)</b> Save data to the open csv file. This file is opened in PBfile_Callback function.</li></ul></div><div><ul><li><b>PBfile_Callback(hObject, eventdata, handles)</b> - Create file and open fid for saving data to disk.</li></ul></div><h2 id="2">Callbacks for UI objects</h2><div><ul><li><b>editTempSP_Callback(hObject, eventdata, handles)</b></li><li><b>editTempSP_CreateFcn(hObject, eventdata, handles)</b></li><li><b>editPval_Callback(hObject, eventdata, handles)</b></li><li><b>editPval_CreateFcn(hObject, eventdata, handles)</b></li><li><b>editIIval_Callback(hObject, eventdata, handles)</b></li><li><b>editIIval_CreateFcn(hObject, eventdata, handles)</b></li><li><b>editDval_Callback(hObject, eventdata, handles)</b></li><li><b>editDval_CreateFcn(hObject, eventdata, handles)</b></li><li><b>editInTemp_Callback(hObject, eventdata, handles)</b></li><li><b>editInTemp_CreateFcn(hObject, eventdata, handles)</b></li><li><b>editOutTemp_Callback(hObject, eventdata, handles)</b></li><li><b>editOutTemp_CreateFcn(hObject, eventdata, handles)</b></li><li><b>editBatteryVolts_Callback(hObject, eventdata, handles)</b></li><li><b>editBatteryVolts_CreateFcn(hObject, eventdata, handles)</b></li></ul></div><p class="footer"><br><a href="http://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2017b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% README.m for Plot_Serial
+%
+% Plot_Serial.m and Plot_Serial.fig are used to define the Graphical User
+% Interface (GUI, or UI) for the incubator.
+%
+%% Plot_Serial.m Functions
+% * *varargout = Plot_Serial(varargin)* - Creates the UI object, not much
+% to edit here
+% 
+% * *Plot_Serial_OpeningFcn(hObject, eventdata, handles, varargin)* -
+% Executes just before the UI is made visible. Setup information goes here.
+% Global buffers are created here to pass data between the other methods of
+% the UI. Globals are used in this context because UI operations are 
+% conducted through callbacks (functions that are passed as a parameter to 
+% other functions) and variables cannot be passed directly with callbacks 
+% in Matlab. See:
+% <https://www.mathworks.com/help/matlab/creating_guis/share-data-among-callbacks.html#bt9p4xi
+% help document> for details. *This will be fixed to not use globals but to
+% use guidata structure to pass data between callbacks in the UI*
+%
+% * *varargout = Plot_Serial_OutputFcn(hObject, eventdata, handles)* - 
+% Outputs from this function are returned to the command line. Currently
+% Unused.
+%
+% * *pushbuttonStop_Callback(hObject, eventdata, handles)* - Callback 
+% action that occurs when the pushbuttonStop is pressed, which is the Stop 
+% button. 
+%
+% * *axesTemp_CreateFcn(hObject, eventdata, handles)* - Creates the axes
+% used to plot the Temperature data.
+%
+% * *usbChoice = choose_usb_dialog()* - Creates Popup to select serial
+% port from drop-down list. Returns the usb selection as a string, usbChoice.
+%
+% * *[obj,flag] = setup_serial(comPort, hObject, handles)* - accepts the string 
+% of the serial port Arduino is connected to (comPort), and as output values it 
+% returns the serial element obj and a flag value used to check if when the 
+% script is compiled the serial element exists yet.
+%
+% * *instrcallback(serialObj, event, hObject, handles)* - 
+% callback for serial.BytesAvailableFunction. 
+% This gets called whenever new data is available on the serial port.
+% This is a callback function, so the state of the handles is the same
+% state as when this function was first called. Handles is passed as 
+% copy. This also means that handles cannot be updated from this 
+% method so guidata(hObject, handles) will not work here.
+%
+% * *updateArduinoVals(handles)* -
+% Update the PID and temperature setpoint values in the arduino.
+%
+% * *save_data(tIn,tOut,tSP,pid,time,volts)*
+% Save data to the open csv file. This file is opened in 
+% PBfile_Callback function.
+%
+% * *PBfile_Callback(hObject, eventdata, handles)* - 
+% Create file and open fid for saving data to disk.
+%
+%
+%% Callbacks for UI objects 
+% * *editTempSP_Callback(hObject, eventdata, handles)*
+% * *editTempSP_CreateFcn(hObject, eventdata, handles)*
+% * *editPval_Callback(hObject, eventdata, handles)*
+% * *editPval_CreateFcn(hObject, eventdata, handles)*
+% * *editIIval_Callback(hObject, eventdata, handles)*
+% * *editIIval_CreateFcn(hObject, eventdata, handles)*
+% * *editDval_Callback(hObject, eventdata, handles)*
+% * *editDval_CreateFcn(hObject, eventdata, handles)*
+% * *editInTemp_Callback(hObject, eventdata, handles)*
+% * *editInTemp_CreateFcn(hObject, eventdata, handles)*
+% * *editOutTemp_Callback(hObject, eventdata, handles)*
+% * *editOutTemp_CreateFcn(hObject, eventdata, handles)*
+% * *editBatteryVolts_Callback(hObject, eventdata, handles)*
+% * *editBatteryVolts_CreateFcn(hObject, eventdata, handles)*
+
+##### SOURCE END #####
+--></body></html>
