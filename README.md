@@ -1,14 +1,10 @@
 Required Libraries
 -------------------
-* PID_v1
-* DallasTemperature
-* OneWire
+* ArduinoJson
 
 TODO
 -----
-* students update P,I,D vals in file
-* cutoff for 45C heater
-* cutoff for low voltage 
+* update README
 
 Bioe3090_Incubator
 ------------------
